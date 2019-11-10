@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Chart</title>
+	<style>
+		.myChart {
+			border: 2px solid white;
+			background-color: Lavender;
+			width: 500px;
+			padding-right: 3cm;
+
+		}
+		.context {
+			border: 2px solid white;
+			background-color: Lavender;
+			width: 400px;
+
+		}
+		.myNewChart {
+			border: 2px solid white;
+			background-color: Lavender;
+			width: 400px;
+		}
+		.chart {
+			border: 2px solid white;
+			background-color: Lavender;
+			width: 35px;
+			height: 20px;
+		}
+		.getContext {
+			border: 2px solid white;
+			background-color: Lavender;
+			width: 110px;
+		}
+		.navy {
+			color: navy;
+		}
+		.blue {
+			color: steelblue;
+		}
+		.red {
+			color: darkred;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Creating a chart</h1>
+	<br>
+	<div class = "text_1">To create a chart, we need to instantiate the <span class="chart">Chart</span> class. To do this, we need <br>
+	to pass in the 2d context of where we want to draw the chart. Here's an example.</div>
+	<br>
+	<div class="myChart">
+		<pre>
+			<span class="navy">&ltcanvas</span>  <span class="blue">id=</span><span class="red">"myChart"</span>  <span class="blue">width=</span><span class="red">"400"</span>  <span class="blue">height=</span><span class="red">"400"</span><span class="navy">&gt&lt/canvas&gt</span>
+		</pre>
+	</div>
+
+	<br>
+	<div class="context">
+		// Get the context of the canvas element we want to select
+		<br>
+		<b>var</b> ctx = <span class="blue">document.</span> getElementById(<span class="red">"myChart"</span>). getContext(<span class="red">"2d"</span>)
+		<br>
+		<b>var</b> myNewChart =
+	<b>new</b> Chart(ctx). PolarArea(data); </div>
+	<br>
+	<div>We can also get the context of our canvas with jQuery. To do this, we need to <br>
+		get the DOM node out of the jQuery collection, and call the <br> <span class="getContext">
+		getContext("2d")</span> method on that.</div>
+		<br>
+		<div class="myNewChart">
+		// Get context with jQuery - using jQuery's get() method.
+		<br>
+		<b>var</b> ctx = $(<span class="red">"#myChart"</span>).get(<span class="blue">0</span>).getContext(<span class="red">"2d"</span>)
+		<br>
+		// This will get the first returned node in the jQuery collection
+		<br>
+		<b>var</b> myNewChart = <b>new</b> Chart(ctx); </div>
+	</body>
+</html>
