@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Pencil</title>
+<style>
+body{
+margin:0;
+width: 100%;}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;}
+
+.container{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.pencil{
+float: left;
+margin-top:15px;
+margin-left:-10px;
+width: 180px;
+height: 50px;
+background-image: linear-gradient(to bottom, #f2fa00 33%, #808000 33%, #edff21 66%, #f2fa00 66%, #f2fa00 100%);
+}
+.top{
+float:left;
+width: 0;
+height: 0;
+margin-top: 15px;
+border-top: 25px solid transparent;
+border-bottom: 25px solid transparent;
+border-left: 35px solid #964b00;
+display: inline-block;}
+
+.peak{
+float: left;
+margin-top:33px;
+width: 0;
+height: 0;
+margin-left: -10px;
+border-top: 7px solid transparent;
+border-bottom: 7px solid transparent;
+border-left: 10px solid black;
+display: inline-block;
+}
+</style>
+<body>
+<div class="container">
+<div class="pencil"></div>
+<div class="top"></div>
+<div class="peak"></div>
+</div>
+</body>
+</html>
