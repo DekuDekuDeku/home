@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Фотогалерея</title>
+    <style>
+    .slide {
+        display:none; position: absolute;
+    }
+    .slide>img {
+        position: absolute;
+        display: block;
+        width: 38vw;
+        height: 31vw;
+        left: 35vw;
+        
+    }
+    
+    #three:checked~#slider>.slide:nth-child(3), #one:checked~#slider>.slide:nth-child(1), 
+    #two:checked~#slider>.slide:nth-child(2), #four:checked~#slider>.slide:nth-child(4), 
+    #five:checked~#slider>.slide:nth-child(5) {
+        display: block;
+    }
+    #three:checked~#slider>.pins>label[for=three], #one:checked~#slider>.pins>label[for=one],
+    #two:checked~#slider>.pins>label[for=two], #four:checked~#slider>.pins>label[for=four],
+    #five:checked~#slider>.pins>label[for=five] {
+        
+        display: block;
+    }
+    #three:checked~#slider>.slide:nth-child(3), #one:checked~#slider>.slide:nth-child(1), 
+    #two:checked~#slider>.slide:nth-child(2), #four:checked~#slider>.slide:nth-child(4), 
+    #five:checked~#slider>.slide:nth-child(5) {
+        
+    }
+    .prevSlide::before {
+        position: absolute;
+        content: "";
+        display: block;
+        height: 0;
+        width: 0;
+        border-top: 3VW solid transparent;
+        border-right: 5VW solid green;
+        border-bottom: 5VW solid transparent;
+        left: 27vw;
+        top: 10vw;
+        
+    }
+    .prevSlide:hover::before {
+        border-top: 3VW solid transparent;
+        border-right: 5VW solid blue;
+        border-bottom: 5VW solid transparent;
+       
+     }
+    .nextSlide::before {
+        position: absolute;
+        content: "";
+        display: block;
+        height: 0;
+        width: 0;
+        border-top: 3VW solid transparent;
+        border-left: 5VW solid green;
+        border-bottom: 5VW solid transparent;
+        left: 75vw;
+        top: 10vw;
+        
+    }
+    .nextSlide:hover::before {
+        border-top: 3VW solid transparent;
+        border-left: 5VW solid blue;
+        border-bottom: 5VW solid transparent;
+        
+    }
+    input[type=radio] {
+        position: relative;
+        float: left;
+        left: 50vw;
+        display: block;
+        background-color: red;
+        top: 32vw;
+    }
+   
+    </style>
+</head>
+
+<body>
+    <h1>добавить стили и расставить for и src так, чтобы работала фотогаллерея</h1>
+	<input type="radio" id="one" name="a">
+	<input type="radio" id="two" name="a">
+	<input type="radio" id="three" name="a"> 
+	<input type="radio" id="four" name="a">
+	<input type="radio" id="five" name="a">
+	<div id="slider">
+		<section class="slide">
+			<img src="https://medialeaks.ru/wp-content/uploads/2019/10/FB-Valera-7.jpg">
+			<label for="five" class="prevSlide"></label>
+			<label for="two" class="nextSlide"></label>
+		</section>
+		<section class="slide">
+			<img src="https://buzza.ru/uploads/images/77f4e7341a434c8fe19b22ef9b6a5cac/8JlLBv.jpg">
+			<label for="one" class="prevSlide"></label>
+			<label for="three" class="nextSlide"></label>
+		</section>
+		<section class="slide">
+			<img src="https://vignette.wikia.nocookie.net/memes2019/images/5/54/Mozhno-ne-nado.jpg/revision/latest/scale-to-width-down/220?cb=20181211224417&path-prefix=ru">
+			<label for="two" class="prevSlide"></label>
+			<label for="four" class="nextSlide"></label>
+		</section>
+		<section class="slide">
+			<img src="https://4tololo.ru/files/inline/images/2019/09/21-0127-1653573515.jpg">
+			<label for="three" class="prevSlide"></label>
+			<label for="five" class="nextSlide"></label>
+		</section>
+		<section class="slide">
+			<img src="https://sun1.cosmostv-by-minsk.userapi.com/c849120/v849120369/35ea4/ucCkJwqnOOM.jpg?ava=1">
+			<label for="four" class="prevSlide"></label>
+			<label for="one" class="nextSlide"></label>
+		</section>
+		<div class="pins">
+			<label for="one"></label>
+			<label for="two"></label>
+			<label for="three"></label>
+			<label for="four"></label>
+			<label for="five"></label>
+		</div>
+	</div>
+</body>
+
+</html>
