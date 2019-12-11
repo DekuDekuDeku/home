@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ООО "Рога и копыта" - заготовка кожи и всего остального</title>
+</head>
+<body>
+<style>
+
+@media screen and (max-width: 400px) {
+
+.triangle {
+width: 0;
+height: 0;
+ }
+.triangle1
+{
+border: 50px solid darkgreen;
+border-top: none;
+border-left-color: transparent;
+border-right-color: transparent;
+transition: 2s;}
+}
+@media screen and (min-width: 400px) and (max-width:799px) {
+.box1{
+background: red;
+display: inline-block;
+width: 195px;
+height: 150px;
+position: absolute;
+bottom: 320px;
+left: 50px;
+transition: 2s;}
+}
+@media screen and (min-width: 800px){
+.circle{
+    background: yellow;
+display: inline-block;
+width: 150px;
+height: 150px;
+position: absolute;
+bottom: 320px;
+left: 50px;
+border-radius:50%;
+transition: 1s;}
+
+}
+
+
+
+
+</style>
+<div class="triangle triangle1"></div>
+<div class="box1"></div>
+<div class="circle"></div>
+
+</body>
+</html>
