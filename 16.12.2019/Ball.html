@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Ball</title>
+	<style>
+
+		@keyframes ball{
+			0%  { bottom: 0; background: green; }
+			50% { bottom: 510px; background: yellow; }
+			100%{ bottom: 0; background: green; }
+		}
+
+		.Ball {
+			animation: ball 2s linear 0s infinite alternate both;
+			position: absolute;
+			border-radius: 1px;
+			bottom: 0px;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background: yellow;
+			border: 3px solid black;
+			display: inline-block;
+			position: absolute;
+			height: 70px;
+			width: 70px;
+			bottom: 80px;
+			left: 100px;
+			border-radius:50%;}
+		}
+
+	</style>
+</head>
+<body>
+<div class="Ball"></div>
+</body>
+</html>
