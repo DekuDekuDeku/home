@@ -1,4 +1,5 @@
-<!DOCTYPE html><!DOCTYPE html>
+</html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,260 +7,166 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Сверстать макет </title>
     <style>
-        .container {
-           display: flex; 
-           flex-direction:column;
-           flex-wrap:wrap-reverse;
-           flex-flow:row wrap;
-           justify-content: space-around;
-           align-items:stretch;
-           align-content:space-around; }
-           .container2 {
-               display: flex; 
-               flex-direction:column;
-               flex-wrap:wrap-reverse;
-               flex-flow:row wrap;
-               justify-content: space-around;
-               align-items:stretch;
-               align-content:space-around; }
-               .container3 {
-                   display: flex; 
-                   flex-direction:column;
-                   flex-wrap:wrap-reverse;
-                   flex-flow:row wrap;
-                   justify-content: space-around;
-                   align-items:stretch;
-                   align-content:space-around; }
-                   .container4 {
-                       display: flex; 
-                       flex-direction:column;
-                       flex-wrap:wrap-reverse;
-                       flex-flow:row wrap;
-                       justify-content: space-around;
-                       align-items:stretch;
-                       align-content:space-around; }
-                       .container5{
-                           display: flex; 
-                           flex-direction:column;
-                           flex-wrap:wrap-reverse;
-                           flex-flow:row wrap;
-                           justify-content: space-around;
-                           align-items:stretch;
-                           align-content:space-around; }
-                           .one {
-                            background-color: grey;
-                            font-size: 16px;
-                            height: 100px;
-                            width: 100px;
-
-                        }
-                        .two {
-                            background-color: grey;
-                            font-size: 16px;
-                            height: 80px;
-                            width:200px;
-
-                        }
-                        .three {
-                            background-color: grey;
-                            font-size: 16px;
-                            height: 80px;
-                            width:300px;
-
-                        }
-                        .four {
-                            background-color: grey;
-                            font-size: 16px;
-                            height: 200px;
-                        }
-                        .five {
-                            background-color: silver;
-                            font-size: 16px;
-
-                        }
-
-                        .six{
-                           background-color: grey;
-                           font-size: 16px;
-                           height: 100px;
-                           width: 100px;
-                       }
-                       .six1{
-                        background-color: grey;
-                        font-size: 16px;
-                        height: 100px;
-                        width: 100px;
-                    }
-                    .six2{
-                       background-color: grey;
-                       font-size: 16px;
-                       height: 100px;
-                       width: 100px;
-                   }
-                   .six3{
-                       background-color: grey;
-                       font-size: 16px;
-                       height: 100px;
-                       width: 100px;
-                   }
-                   .six4{
-                    background-color: grey;
-                    font-size: 16px;
-                    height: 100px;
-                    width: 100px;
-                }
-                .six5{
-                    background-color: grey;
-                    font-size: 16px;
-                    height: 100px;
-                    width: 100px;
-                }
-                .six6{
-                   background-color: grey;
-                   font-size: 16px;
-                   height: 100px;
-                   width: 100px;
-               }
-               .seven{
-                   background-color: grey;
-                   font-size: 16px;
-                   height: 100px;
-                   width: 100px;
-
-               }
-               .eight{
-                   background-color: silver;
-                   font-size: 16px;
-                   height: 230px;
-                   width: 230px;
-               }
-               .nine {
-                background-color: silver;
-                font-size: 16px;
-                height: 230px;
-                width: 230px; 
+        @media screen and (max-width: 639px) {
+            header>:nth-child(2),
+            footer>:not(:last-child) {
+                display: none;
             }
-            .ten{
-             background-color: grey;
-             font-size: 16px;
-             width:200px;
-         }
-         .eleven{
-             background-color: grey;
-             font-size: 16px;
-             width:250px;
-         }
-         .twelf{
-             background-color: grey;
-             font-size: 16px;
-             width:400px;
-             height: 100px;
-         }
-         .thirteen{
-             background-color: grey;
-             font-size: 16px;
-             width:400px;
-             height: 100px;
-
-         }
-     </style>
-
- </head>
-
- <body>
-    <div class="container">
+            body {
+                margin: 0;
+            }
+            header,
+            main,
+            footer {
+                outline: 1px solid silver;
+            }
+            div {
+                outline: 1px solid silver;
+                padding: 10px;
+            }
+        
+        header:nth-child(1),
+        header:nth-child(2),
+        aside:nth-child(1) {
+            background: lightgray;
+        }
+        input {
+            width: 100%;
+        }
+        article>ul>li:nth-child(1) {
+            background: gray;
+        }
+        ul label {
+            display: block;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        #menu~ul {
+            left: 0;
+            background-color: gray;
+            position: absolute;
+            display: none;
+        }
+        #menu:checked~ul {
+            display: block;
+           
+        }
+        aside>div:first-child {
+            position: fixed;
+        }
+        article>div>ul>li {
+            position: relative;
+        }
+        }
+        @media screen and (min-width: 640px) {
+            header:nth-child(2) {}
+            aside {
+                display: flex;
+                width: 60%;
+                flex-wrap: wrap;
+            }
+            .one {
+                float: left;
+                width: 120px;
+                height: 110px;
+                margin-bottom: 5px;
+                margin-left: 10px;
+                background-color: gray;
+                text-align: center;
+            }
+            .two {
+                float: left;
+                width: 250px;
+                height: 110px;
+                margin-bottom: 10px;
+                margin-left: 10px;
+                background-color: gray;
+                text-align: center;
+            }
+            .four {
+                float: left;
+                width: 180px;
+                height: 290px;
+                margin-bottom: 10px;
+                margin-left: 10px;
+                background-color: gray;
+                text-align: center;
+            }
+            .eight,
+            .nine {
+                float: left;
+                width: 350px;
+                height: 200px;
+                margin-bottom: 10px;
+                margin-left: 15px;
+                background-color: silver;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
         <header>
-            <div class="one">1</div>
-            <div class="two">2</div>
-            <div class="three">3
-                +7(499)346-21-31
-                <br>manager@pixelplus.ru
-                <br> www.pixelplus.ru</div>
-            </div>
+            <div class="one">Логотип</div>
+            <div></div>
+            <div class="two">Контакты</div>
         </header>
         <hr>
         <main>
             <aside>
-                <div class="container2">
-                   <div class="four">4
-                       Создание сайтов
-                       <br>Изготовление сайтов
-                       <br>"под ключ"
-                       <br>Как мы работаем
-                       <br>Интеграция с 1С
-                       <br>Поддержка сайтов
-                       <br>Создание сайтов на 
-                       <br>Битрикс
-                       <br>Модули Битрикс
-                       <br>Купить Битрикс
-                       <br>Дизайн сайтов
-                       <br>Редизайн сайтов
-                       <br>Интернет-магазины
-                       <br>Создание логотипов</div>
-                       <div class="five">5
-                        PSD файл с макетом. Макет разбит по слоям и сгрупирован по папкам:
-                        <ul>
-                            <li><b>number</b> - нумерация блоков(номера блоков верстать не нужно)</li>
-                            <li><b>text</b> - текстовые блоки </li>
-                            <li><b>head</b> - шапка сайта</li>
-                            <li><b>content</b> контентная область, которая в свою очередь делится на <b>left</b> и <b>center</b></li>
-                        </ul>
-                        Текстовое описание задания и требования.
-                    </div>
+                <div class="four">
+                    <input type="checkbox" id="menu"><label for="menu">menu</label>
+                    <ul>
+                        <li>Создание сайтов</li>
+                        <li>Изготовление сайтов "под ключ
+                        <li>Как мы работаем
+                        <li>Интеграция с 1С
+                        <li>Поддержка сайтов
+                        <li>Создание сайтов на Битрикс
+                        <li>Купить битрикс
+                        <li>Дизайн сайтов
+                    </ul>
                 </div>
+                <div></div>
             </aside>
-            <div class="container3">
-                <div class="six">6</div>
-                <div class="six1">6</div>
-                <div class="six2">6</div>
-                <div class="six3">6</div>
-                <div class="six4">6</div>
-                <div class="six5">6</div>
-                <div class="six6">6</div>
-                <article>
-                   <div class="container4">
-                    <div class="seven">7</div>
-                    <div class="eight">
-                       8
-                   Студия "Пиксель Плюс" разработает полнофункциональный продукт ориентированный на целевую аудиторию и эффективно решающий поставленные перед ним маркетинговые задачи. Опыт работ и использование собственных технологий, позволяет предлагать услугу изготовления сайта в Москве в разумные сроки.</div>
-               </div>
-               <div class="nine">9
-                Поисковое продвижение (раскрутка) ведется по
-                <br>коммерческим запросам, что позволяет многократно увеличить количество продаж с сайта при 
-                <br>разумном рекламном бюджете.
-            </div>
-        </div> 
-    </article>
-    <hr>
-</main>
-<footer>
-    <div class="container5">
-        <div class="ten"> 10
-            <ul>
-                Пункт 01     Пункт 08 
-                Пункт 02     Пункт 09
-                Пункт 03     Пункт 10
-                Пункт 04     Пункт 11
-                Пункт 05     Пункт 12
-                Пункт 06     Пункт 13
-                Пункт 07     Пункт 14
-            </ul>
-        </div>
-        <div class="eleven"> 11
-            <ul>
-                <li>Поисковое предложение сайтов</li>
-                <li>Тариф "Старт"</li>
-                <li>Тариф "Продвижение Плюс"</li>
-                <li>Тариф "Интернет-магазин"</li>
-                <li>Тариф "Эксклюзив"</li>
-                <li>Тариф "Контекст + SEO"</li>
-                <li>Тариф "Регион"</li>
-            </ul>
-        </div>
-        <div class="twelf">12</div>
-        <div class="thirteen">13</div>
+            <article>
+                <div></div>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div class="eight">"Пиксель Плюс"</div>
+                <div class="nine">Поисковое продвижение, раскрутка</div>
+            </article>
+            <hr>
+        </main>
+        <footer>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </footer>
     </div>
-</footer>
-</div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
