@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Content</title>
+</head>
+<body>
+<script>
+function createCookie(name,value,days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
+    }
+    else var expires = "";
+    document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+
+  }
+</script>
+<h1>Анкета</h1>   
+        <form action=""> 
+         
+         <p>Фамилия: <INPUT TYPE="text" SIZE="30" name="surname"
+              onFocus="window.status='Введите свою фамилию';"></p>
+               <p><input type="button" value=" Добавить"></p>
+            <p>Имя: <INPUT TYPE="text" SIZE="36" name="name"
+              onFocus="window.status='Введите своё имя';"></p>
+               <p><input type="button" value=" Добавить"></p>
+            Отчество: <INPUT TYPE="text" SIZE="30" name="otchestvo"
+              onFocus="window.status='Введите своё отчество';"><br> 
+               <p><input type="button" value=" Добавить"></p> 
+            <p>Пол: <INPUT TYPE="radio" name="sex"
+              onClick="window.status='Вы выбрали мужской';">Мужской 
+            <INPUT TYPE="radio" name="sex"  
+              onClick="window.status='Вы выбрали женский';">Женский</p>
+               <p><input type="button" value=" Добавить"></p>
+            <p>Страна проживания: <input type="text" name="country" size="50"
+                onFocus="window.status='Введите свою страну проживания';"></p>
+                 <p><input type="button" value=" Добавить"></p>
+                <p>Образование: <name="education">
+                <select>
+<option>БГТУ</option>
+  <option>МГЛУ</option>
+  <option>БНТУ</option>
+</select></p>
+ <p><input type="button" value=" Добавить"></p>
+ <p><INPUT TYPE="reset" 
+              onClick="alert('Очистить');"> 
+            <INPUT TYPE="submit" 
+              onClick="alert('Отправить');"></p>
+              <button type="button" onclick="work()">Показать данные</button>
+              <button type="button" onclick="work()">Показать статистику</button>   
+        </form>  
+<div id="content"></div>
+</body>
+</html>
